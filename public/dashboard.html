@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Study Planner Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+  <h1>AI Study Planner 🚀</h1>
+
+  <!-- AI PLAN GENERATOR -->
+  <!-- <div class="card">
+    <h2>🧠 Generate AI Study Plan</h2>
+    <select id="career">
+      <option value="">Select Career</option>
+      <option>Web Developer</option>
+      <option>Data Scientist</option>
+    </select>
+    <input type="text" id="subject" placeholder="Enter Subject">
+<input type="number" id="hours" placeholder="Enter Study Hours">
+<button onclick="generatePlan()">Generate Plan</button>
+<div id="planOutput"></div>
+
+  </div> -->
+
+  <div class="plan-generator">
+  <h3>Generate Weekly Plan</h3>
+
+  <select id="subject">
+    <option value="DSA">Data Structures</option>
+    <option value="DBMS">DBMS</option>
+    <option value="OS">Operating System</option>
+    <option value="CN">Computer Networks</option>
+    <option value="Web">Web Development</option>
+  </select>
+
+  <input type="number" id="hours" placeholder="Hours per day" />
+
+  <select id="level">
+    <option value="Easy">Easy</option>
+    <option value="Medium">Medium</option>
+    <option value="Hard">Hard</option>
+  </select>
+
+  <button onclick="generateSubjectPlan()">Generate Plan</button>
+
+
+  <!-- <button id="generateBtn">Generate Plan</button> -->
+
+  <textarea id="weeklyPlan" rows="12"></textarea>
+</div>
+
+  <!-- STUDY TIMER -->
+  <div class="card">
+    <h2>⏳ Study Timer</h2>
+    <h1 id="timer">25:00</h1>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+
+  <!-- GOAL TRACKER -->
+  <div class="card">
+    <h2>🎯 Goal Tracker</h2>
+    <input type="text" id="goalInput" placeholder="Enter your goal">
+    <button onclick="addGoal()">Add Goal</button>
+    <ul id="goalList"></ul>
+  </div>
+
+  <!-- WEEKLY PLANNER -->
+  <div class="card">
+    <h2>📅 Weekly Planner</h2>
+    <textarea id="weeklyPlan" placeholder="Write your weekly plan..."></textarea>
+    <button onclick="savePlan()">Save Plan</button>
+  </div>
+
+  <!-- PROGRESS CHART -->
+  <div class="card">
+    <h2>📊 Study Progress</h2>
+    <canvas id="progressChart"></canvas>
+  </div>
+
+  <button class="logout" onclick="logout()">Logout</button>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
