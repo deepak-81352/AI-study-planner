@@ -30,7 +30,7 @@
 //     document.getElementById("message").innerText = data.message;
 //   }
 // }
-const BASE_URL = "https://ai-study-planner.onrender.com"; // your Render URL
+const BASE_URL = "https://ai-study-planner-2-p1se.onrender.com";
 
 async function signup() {
   const email = document.getElementById("email").value;
@@ -57,6 +57,7 @@ async function login() {
   });
 
   const data = await res.json();
+  console.log(data); // 🔥 important
 
   if (data.success) {
     window.location.href = "dashboard.html";
