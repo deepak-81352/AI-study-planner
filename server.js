@@ -18,7 +18,13 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log("Mongo Error:", err));
 
-// PORT FIX
+// ✅ ADD THESE ROUTES BACK
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/study", require("./routes/study"));
+app.use("/api/ai", require("./routes/ai"));
+app.use("/api/weeklyPlan", require("./routes/weeklyPlan"));
+
+// PORT
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
